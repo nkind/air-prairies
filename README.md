@@ -2,4 +2,4 @@
 
 Intermediate Software Engineering
 
-link to the wiki page https://git.cs.usask.ca/yol474/cmpt370-fantastic-4/wikis/Milestone-1
+Link to the Wiki page https://git.cs.usask.ca/yol474/cmpt370-fantastic-4/wikis
