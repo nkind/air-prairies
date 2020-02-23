@@ -1,12 +1,1 @@
-Fantastic Four
-
-Hello World instructions:
-
-Requires node.js and sqlite 3 to be run
-
-1. Go to the 'Hello_World' directory
-
-2. In command line enter: 'node hello_world.js'
-
-3. It will indicate it has connected and can be seen on http://localhost:8888/
-
+©íjËbpZ.¬w¥–…¨®WbËk¹Ëb¢{z«¢­ë'¡×£²Ê¥Š×·jwh¦{hmêîŸQ¨¶‹axw¥–…¨®W]Š·œ¶ŠòØ‰Ü¢išÙbç§µêç¡×¡zYhÂŠåv;7"Ü"–X§v'µè­…«¢yŞr×jw\jvŞ±ç§¢xm¶Ÿÿ–‡–,·Ï<ó
