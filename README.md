@@ -14,5 +14,5 @@ npm install sqlite3<br>
 npm install express<br>
 npm install ejs<br>
 
-Finally, run 'node app.j's  in the terminal to start ther server. <br>
+Finally, run 'node app.js'  in the terminal to start ther server. <br>
 The localhost should be listening at: http://localhost:2020/search
