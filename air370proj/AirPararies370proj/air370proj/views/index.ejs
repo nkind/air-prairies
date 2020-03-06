@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Air Prairies</title>
+
+		<%# Eric Meyers CSS reset %> 
+		<link rel="stylesheet" type="text/css" href="/css/css-reset.css">
+
+		<%# Custom Style Sheet %>
+		<link rel="stylesheet" type="text/css" href="/css/index-style.css">
+
+		<%# Google fonts %>
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<div class="company">
+					<h1> Air Prairies </h1>
+					<h3>From the prairies sky to the overseas</h3>
+				</div>
+
+				<nav>
+					<a href="/"><button>Home page</button></a>
+					<a href="/aboutpage"><button>About</button></a>
+				</nav>
+
+			</header>
+
+		<h4></h4>
+		<p></p>
+
+		<form action="/searchResults" method="POST">
+			<label for="oneway"> one way : </label>
+			<input name="tripchoice" value="oneway" type="radio">
+	
+
+			<label for="round"> round : </label>
+			<input name="tripchoice" value="round" type="radio">
+			<p></p>
+
+			<br>
+
+			<label for="origin"> origin : </label>
+			<select id= "origin", name = "origin">
+				<option value="">------select------</option>
+				<%var list= []%>
+
+	    		<%for ( var i = 0; i < oneWayFlights.length; i++ ){%>
+
+	    
+	        	<option value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
+
+	            
+	        
+	         	<%}%>
+	            
+			</select>
+
+
+
+
+		<label for="destination"> destination : </label>
+		<select id= "destination", name = "destination">
+			<option value="">------select------</option>
+			<%var list= []%>
+
+	    	<%for ( var i = 0; i < oneWayFlights.length; i++ ) { %>
+
+	    
+	        <option  value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
+
+	            
+	        
+	        <%}%>
+
+	            
+			</select>
+			<p></p>
+			<br>
+
+			<label for="theDate">Choose your departure_date:
+             	<input type="date" name="theDate" min="2020-01-01" max="2022-04-30">
+    		</label>
+
+			<br>
+			<h4></h4>
+
+	 		<button>Submit</button>
+
+
+		</form>
+		</div>
+	</body>
+</html>

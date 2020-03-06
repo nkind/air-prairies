@@ -1,0 +1,86 @@
+<h1>Traveller information page</h1>
+<h2>You're on your way to your destination !!</h2>
+<h4></h4>
+
+<div><a href="/searchResults"><button> Go back to results </button></a> </div>
+<h4></h4>
+<p></p>
+<p></p>
+
+
+<div>
+	<form action="/payment" method="POST" onsubmit="return confirm('By clicking OK, you are confirming the correctness of your information !!')">
+		<label for="name"> Name * : </label>
+		<input type="text" name="name" id="name" required="">
+		
+
+		<label for="age"> Age * : </label>
+		<input type="text" name="age" id="age" required="">
+
+
+		<label for="male"> Male : </label>
+		<input name="gender" value="male" type="radio" >
+		
+
+		<label for="female"> Female : </label>
+		<input name="gender" value="female" type="radio">
+
+		<p></p>
+
+		<p></p>
+
+		<br>
+
+		<label for="nationality"> Nationality * : </label>
+		<input type="text" name="nationality" id="nationality" required="">
+
+		<label for="phone"> Phone Number * : </label>
+		<input type="text" name="phone" id="phone" required="">
+		<h4></h4>
+
+		<br>
+
+		<label for="address1"> Address line 1 * : </label>
+		<input type="text" name="address1" id="address1" required="">
+		<p></p>
+
+		<br>
+
+		<label for="address2"> Address line 2 (optional) : </label>
+		<input type="text" name="address2" id="address2">
+		<p></p>
+
+		<br>
+
+		<label for="country"> Country * : </label>
+		<input type="text" name="country" id="country" required="">
+		<p></p>
+
+		<br>
+
+		<label for="province"> Province/Territory  *: </label>
+		<input type="text" name="province" id="province" required="">
+		<p></p>
+
+
+		<label for="postalcode"> Postal Code * : </label>
+		<input type="text" name="postalcode" id="postalcode" required="">
+		<p></p>
+
+		<br>
+
+		<label for="email"> Email * : </label>
+		<input type="text" name="email" id="email" required="">
+		<p></p>
+
+		<br>
+		<h4></h4>
+
+		<button>Proceed to payment</button>
+
+
+	</form>
+	
+
+
+</div>

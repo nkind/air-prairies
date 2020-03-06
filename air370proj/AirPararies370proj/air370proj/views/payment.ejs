@@ -1,0 +1,45 @@
+<h1>You're almost there !!! </h1>
+<h2>Pay Now to Secure your reservation </h2>
+<p></p>
+<div><a href="/info"><button> Go back to info-page </button></a> </div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<div>
+	<form action="/reserved" method="POST" onsubmit="return confirm('Are you sure you want to book !!')">
+		<label for="nameOnCard"> Name On Card * : </label>
+		<input type="text" name="nameOnCard" id="nameOnCard" required="">
+
+		<label for="visa"> Visa : </label>
+		<input name="cardType" value="visa" type="radio" required="">
+		
+
+		<label for="mastercard"> MasterCard : </label>
+		<input name="cardType" value="mastercard" type="radio" required="">
+		<p></p>
+
+		<br>
+
+		<label for="cardnumber"> Card Number *  : </label>
+		<input type="text" name="cardnumber" id="cardnumber" required="">
+
+		<label for="expiry"> Expiry Date *  : </label>
+		<input type="text" name="expiry" id="expiry" required="">
+
+		<label for="cvv"> CVV *  : </label>
+		<input type="text" name="cvv" id="cvv" required="">
+
+		<br>
+		<h4></h4>
+
+		<button> Reserve </button>
+
+		
+
+
+	</form>
+
+
+</div>

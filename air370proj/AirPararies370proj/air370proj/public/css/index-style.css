@@ -1,0 +1,17 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image:linear-gradient(#F4D03F, #16A085);
+    font-family: 'Roboto', 'sans-serif';
+    color: white;
+    font-size: 1.125rem;
+}
+
+.container {
+    width: 1024px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
