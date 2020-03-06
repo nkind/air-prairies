@@ -26,7 +26,7 @@ The localhost will be listening at: http://localhost:2020/search
 
 **Current Restrictions**
 
-Only direct flights can be used currently the other options will throw errors.<br>
+Only direct flights can be used currently the other options will refresh page.<br>
 Examples of available flights for testing:
 *  Calgary to London
 *  Saskatoon to Calgary
