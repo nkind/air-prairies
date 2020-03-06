@@ -6,7 +6,7 @@ Link to the Wiki page https://git.cs.usask.ca/yol474/cmpt370-fantastic-4/wikis
 
 Requires nodeJs to run.<br>
 
-run  the following commands inside the air370proj folder containing the 
+Run the following commands inside the air370proj folder containing the 
 app.js file, the database, and the views folder.<br>
 
 npm init <br>
@@ -14,5 +14,5 @@ npm install sqlite3<br>
 npm install express<br>
 npm install ejs<br>
 
-finally, run node app.js to start ther server.
+Finally, run 'node app.j's  in the terminal to start ther server. <br>
 The localhost should be listening at: http://localhost:2020/search
