@@ -31,69 +31,70 @@
 
 			</header>
 
-		<h4></h4>
-		<p></p>
 
-		<form action="/searchResults" method="POST">
-			<label for="oneway"> one way : </label>
-			<input name="tripchoice" value="oneway" type="radio">
+		<main>
+			<form action="/searchResults" method="POST" class="search-form">
+				<div class="trip-type">
+					<label for="oneway"> one way : </label>
+					<input class="tripchoice" name="tripchoice" value="oneway" type="radio">
 	
 
-			<label for="round"> round : </label>
-			<input name="tripchoice" value="round" type="radio">
-			<p></p>
+					<label for="round"> round : </label>
+					<input name="tripchoice" value="round" type="radio">
+					<p></p>
+				</div>
+				<br>
 
-			<br>
+				<label for="origin"> origin : </label>
+				<select id= "origin", name = "origin">
+					<option value="">------select------</option>
+					<%var list= []%>
 
-			<label for="origin"> origin : </label>
-			<select id= "origin", name = "origin">
+	    			<%for ( var i = 0; i < oneWayFlights.length; i++ ){%>
+
+	    
+	        		<option value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
+
+	            
+	        
+	         		<%}%>
+	            
+				</select>
+
+
+
+
+			<label for="destination"> destination : </label>
+			<select id= "destination", name = "destination">
 				<option value="">------select------</option>
 				<%var list= []%>
 
-	    		<%for ( var i = 0; i < oneWayFlights.length; i++ ){%>
+	    		<%for ( var i = 0; i < oneWayFlights.length; i++ ) { %>
 
 	    
-	        	<option value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
+	        	<option  value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
 
 	            
 	        
-	         	<%}%>
-	            
-			</select>
-
-
-
-
-		<label for="destination"> destination : </label>
-		<select id= "destination", name = "destination">
-			<option value="">------select------</option>
-			<%var list= []%>
-
-	    	<%for ( var i = 0; i < oneWayFlights.length; i++ ) { %>
-
-	    
-	        <option  value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
+	        	<%}%>
 
 	            
-	        
-	        <%}%>
+				</select>
+				<p></p>
+				<br>
 
-	            
-			</select>
-			<p></p>
-			<br>
+				<label for="theDate">Choose your departure_date:
+             		<input type="date" name="theDate" min="2020-01-01" max="2022-04-30">
+    			</label>
 
-			<label for="theDate">Choose your departure_date:
-             	<input type="date" name="theDate" min="2020-01-01" max="2022-04-30">
-    		</label>
+				<br>
+				<h4></h4>
 
-			<br>
-			<h4></h4>
-
-	 		<button>Submit</button>
+	 			<button>Submit</button>
 
 
-		</form>
+				</form>
+			</main>
 		</div>
 	</body>
 </html>

@@ -22,3 +22,9 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+form {
+    min-height: 300px;
+    display: flexbox;
+    align-items: center;
+}
