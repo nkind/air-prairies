@@ -23,8 +23,21 @@ header {
     justify-content: center;
 }
 
-form {
+main {
     min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
     display: flexbox;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.trip-type{
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
 }
