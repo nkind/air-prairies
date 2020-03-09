@@ -23,29 +23,45 @@ header {
     border-bottom: 1px solid lightgray;
 }
 
+
 main {
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-sizing: border-box;
 }
 
-.lines {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.origin, .destination {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
 }
 
 .submit-button {
     background-color: white;
-    color: black;
-    font-family: 'Playfair Display', serif;
+    color: #4CAF50;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-family: 'Playfiar Display', serif;
     font-size: 1rem;
-    padding: 8px 20px;
-    border-radius: 12px;
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 200px;
+}
+
+.submit-button:hover {
+    background-color: whitesmoke;
+}
+
+.lines {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.815);
+    padding: 20px 20px 50px 20px;
+    margin-top: 30px;
 }
 
 .navbutton {
@@ -55,7 +71,3 @@ main {
     padding: 10px 30px; 
 }
 
-.line1, .line2, .line3 {
-    padding: 30px 30px 20px 30px;
-    box-sizing: border-box;
-}

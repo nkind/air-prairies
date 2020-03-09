@@ -36,21 +36,20 @@
 
 		<main>
 
-			<form action="/searchResults" method="POST">
-				<div class="lines">
+			<form action="/searchResults" method="POST" class="lines">
 
 				<div class="line1">
 
-					<label for="oneway" class="oneway"> One-way : </label>
-					<input class="oneway" name="tripchoice" value="oneway" type="radio">
-					<label for="round" class="round"> Round-trip : </label>
-					<input class="round" name="tripchoice" value="round" type="radio">
+					<label for="oneway"> One-way : </label>
+					<input name="tripchoice" value="oneway" type="radio">
+					<label for="round"> Round-trip : </label>
+					<input name="tripchoice" value="round" type="radio">
 
 				</div>
 
 				<div class="line2">
 
-					<label for="origin" class="origin"> Origin : </label>
+					<label for="origin"> Origin : </label>
 					<select id= "origin", name = "origin" class="origin">
 						<option value="">------select------</option>
 						<%var list= []%>
@@ -61,7 +60,7 @@
 	         			<%}%>
 					</select>
 
-					<label for="destination" class="destination"> Destination : </label>
+					<label for="destination"> Destination : </label>
 					<select class="destination" id= "destination", name = "destination">
 
 						<option value="">------select------</option>
@@ -84,9 +83,9 @@
 					</label>
 
 				</div>
-			</div>
 
 	 			<button class="submit-button">Submit</button>
+
 				</form>
 			</main>
 		</div>
