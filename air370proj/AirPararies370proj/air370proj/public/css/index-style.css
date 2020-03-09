@@ -17,11 +17,15 @@ body {
 }
 
 header {
-    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.top-nav {
+    padding-left: 600px;
+}
+
 
 main {
     min-height: 300px;
@@ -40,4 +44,15 @@ form {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+button {
+    background-color: white;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    padding: 8px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 10px;
 }
