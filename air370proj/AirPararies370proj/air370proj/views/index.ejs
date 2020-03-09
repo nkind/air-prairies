@@ -14,84 +14,79 @@
 
 		<%# Google fonts %>
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300&display=swap" rel="stylesheet">
+
 	</head>
 
 	<body>
 		<div class="container">
+
 			<header>
+
 				<div class="logobox">
 					<img src="/images/Air Prairies-logos_black.png" alt="Company logo" height="200px" width="200px">
 				</div>
 
-				<nav class="top-nav">
-					<a href="/">HOME</a>		
-					<a href="/aboutpage">ABOUT</a>
+				<nav>
+					<a href="/" class="navbutton">HOME</a>		
+					<a href="/aboutpage" class="navbutton">ABOUT</a>
 				</nav>
 
 			</header>
 
 
 		<main>
-			<form action="/searchResults" method="POST" class="search-form">
-				<div class="trip-type">
-					<label for="oneway"> one way : </label>
-					<input class="tripchoice" name="tripchoice" value="oneway" type="radio">
-	
 
-					<label for="round"> round : </label>
-					<input name="tripchoice" value="round" type="radio">
-					<p></p>
+			<form action="/searchResults" method="POST">
+				<div class="lines">
+
+				<div class="line1">
+
+					<label for="oneway" class="oneway"> One-way : </label>
+					<input class="oneway" name="tripchoice" value="oneway" type="radio">
+					<label for="round" class="round"> Round-trip : </label>
+					<input class="round" name="tripchoice" value="round" type="radio">
+
 				</div>
-				<br>
 
-				<label for="origin"> origin : </label>
-				<select id= "origin", name = "origin">
-					<option value="">------select------</option>
-					<%var list= []%>
+				<div class="line2">
 
-	    			<%for ( var i = 0; i < oneWayFlights.length; i++ ){%>
+					<label for="origin" class="origin"> Origin : </label>
+					<select id= "origin", name = "origin" class="origin">
+						<option value="">------select------</option>
+						<%var list= []%>
 
+	    				<%for ( var i = 0; i < oneWayFlights.length; i++ ){%>
+
+	        			<option value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
+	         			<%}%>
+					</select>
+
+					<label for="destination" class="destination"> Destination : </label>
+					<select class="destination" id= "destination", name = "destination">
+
+						<option value="">------select------</option>
+						<%var list= []%>
+
+	    				<%for ( var i = 0; i < oneWayFlights.length; i++ ) { %>
 	    
-	        		<option value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
+	        			<option  value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
 
+	        			<%}%>
 	            
-	        
-	         		<%}%>
-	            
-				</select>
+					</select>
 
+				</div>
 
+				<div class="line3">
 
+					<label for="theDate">Departure date:
+             			<input type="date" name="theDate" min="2020-01-01" max="2022-04-30">
+					</label>
 
-			<label for="destination"> destination : </label>
-			<select id= "destination", name = "destination">
-				<option value="">------select------</option>
-				<%var list= []%>
+				</div>
+			</div>
 
-	    		<%for ( var i = 0; i < oneWayFlights.length; i++ ) { %>
-
-	    
-	        	<option  value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
-
-	            
-	        
-	        	<%}%>
-
-	            
-				</select>
-				<p></p>
-				<br>
-
-				<label for="theDate">Choose your departure_date:
-             		<input type="date" name="theDate" min="2020-01-01" max="2022-04-30">
-    			</label>
-
-				<br>
-				<h4></h4>
-
-	 			<button>Submit</button>
-
-
+	 			<button class="submit-button">Submit</button>
 				</form>
 			</main>
 		</div>
