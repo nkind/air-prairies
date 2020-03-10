@@ -4,7 +4,7 @@ html {
 
 body {
     background-image:linear-gradient(#F4D03F, #16A085);
-    font-family: 'Roboto', 'sans-serif';
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 1.125rem;
 }
@@ -49,7 +49,7 @@ label {
     border-radius: 4px;
     cursor: pointer;
     float: right;
-    font-family: 'Playfiar Display', serif;
+    font-family: 'DM Serif Text', serif;
     font-size: 1rem;
 }
 
@@ -66,9 +66,14 @@ label {
 
 .navbutton {
     margin-left: 10px;
-    font-family: 'Playfair Display', serif;
-    border: 2px solid white;
+    color: black;
+    font-family: 'DM Serif Text', serif;
+    border: 2px solid black;
     padding: 10px 30px; 
+}
+
+.navbutton:hover {
+    background-color: whitesmoke;
 }
 
 
