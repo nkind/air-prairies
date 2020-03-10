@@ -19,6 +19,8 @@ body {
 header {
     display: flex;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     justify-content: space-between;
     border-bottom: 1px solid lightgray;
 }
@@ -66,14 +68,13 @@ label {
 
 .navbutton {
     margin-left: 10px;
-    color: black;
     font-family: 'DM Serif Text', serif;
-    border: 2px solid black;
+    border: 2px solid white;
     padding: 10px 30px; 
 }
 
 .navbutton:hover {
-    background-color: whitesmoke;
+    background-color: #FF725C;
 }
 
 
