@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(#f4d03f, #16a085);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.125rem;
+}
+
+.container {
+    width: 1024px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+main {
+    box-sizing: border-box;
+}
+
+.navbutton {
+    margin-left: 10px;
+    font-family: 'DM Serif Text', serif;
+    border: 2px solid white;
+    padding: 10px 30px;
+}
+
+.navbutton:hover {
+    background-color: #ff725c;
+}
