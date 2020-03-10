@@ -94,7 +94,7 @@ app.post("/searchResults", function(req, res){
 
 
 
-app.get("/aboutpage", function(req, res){
+app.get("/about", function(req, res){
     res.render("aboutpage");
 
 
