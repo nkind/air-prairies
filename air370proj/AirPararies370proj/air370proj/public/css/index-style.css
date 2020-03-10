@@ -1,0 +1,109 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image:linear-gradient(#F4D03F, #16A085);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.125rem;
+}
+
+.container {
+    width: 1024px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+
+main {
+    box-sizing: border-box;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.origin, .destination {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: white;
+    color: #4CAF50;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1rem;
+}
+
+.submit-button:hover {
+    background-color: whitesmoke;
+}
+
+.lines {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.815);
+    padding: 20px 20px 60px 20px;
+    margin-top: 30px;
+}
+
+.navbutton {
+    margin-left: 10px;
+    font-family: 'DM Serif Text', serif;
+    border: 2px solid white;
+    padding: 10px 30px; 
+}
+
+.navbutton:hover {
+    background-color: #FF725C;
+}
+
+
+[type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+
+.line3 input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 190px;
+}
+
+h1 {
+    font-size: 3.25rem;
+    font-family: 'DM Serif Text', serif;
+    margin: 1rem 0;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5)
+}

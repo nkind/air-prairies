@@ -1,0 +1,25 @@
+<h1>Welcome to the results page</h1>
+
+<h4></h4>
+<div><a href="/"><button>Go back to search</button></a></div>
+<h4></h4>
+<p></p>
+<p></p>
+
+
+<% savedresults.forEach(function(result){%>
+    <div>
+        <%
+        for ( var i = 0; i < savedresults.length; i++ )
+        {
+        
+            %>
+            
+            	<p value="<%=savedresults[i].id %>"><%-JSON.stringify(savedresults[i]) %> <a href="/info"> <button>book</button> </a> </p><%
+        	
+        }
+        %>
+    </div>
+
+<%}); %>
+
