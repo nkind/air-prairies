@@ -47,6 +47,30 @@ main {
     text-align: center;
 }
 
+.card1 {
+    background-image: url(/images/bg-1.png);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;
+}
+
+.card2 {
+    background-image: url(/images/bg-2.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;
+}
+
+.card3 {
+    background-image: url(/images/bg-3.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;
+}
+
 h1 {
     font-size: 3.25rem;
     font-family: 'DM Serif Text', serif;
