@@ -30,6 +30,7 @@ main {
     box-sizing: border-box;
 }
 
+/* Change form layout to give space for each input */
 input[type=text], select {
     width: 99%;
     padding: 12px 20px;
@@ -59,6 +60,7 @@ input[type=text], select {
     background-color: #ff725cad;
 }
 
+/* Create box around form */
 .lines {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.815);
@@ -90,11 +92,13 @@ h2 {
     margin-top: 10px;
 }
 
+/* Make form scrollable so it does not overflow the page */
 form {
     height: 400px;
     overflow-y: auto;
 }
 
+/* webkit to customize the scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }

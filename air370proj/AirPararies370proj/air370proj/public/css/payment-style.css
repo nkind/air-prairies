@@ -28,6 +28,7 @@ main {
     box-sizing: border-box;
 }
 
+/* Formatting all the text input boxes */
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -55,6 +56,7 @@ input[type=text], select {
     background-color: #ff725cad;
 }
 
+/* container for the lines in the form */
 .lines {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.815);

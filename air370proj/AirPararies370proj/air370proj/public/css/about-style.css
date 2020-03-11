@@ -30,12 +30,7 @@ main {
     align-items: center;
 }
 
-.cards {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
-
+/* herobox 1 and 2 display first above the cards */
 .herobox1 {
     flex: 2;
     padding-right: 100px;
@@ -43,6 +38,13 @@ main {
 
 .herobox2 {
     flex: 1;
+}
+
+/* cards make up the bottom row of the page */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
 
 h1 {
