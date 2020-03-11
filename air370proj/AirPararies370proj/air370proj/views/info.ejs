@@ -30,11 +30,12 @@
 				
 			</header>
 
+			<main>
 			<h1>Traveller information page</h1>
 			<h2>You're on your way to your destination!</h2>
 
-		<div>
-			<form action="/payment" method="POST" onsubmit="return confirm('By clicking OK, you are confirming the correctness of your information !!')">
+		<div class="lines">
+			<form action="/payment" method="POST" onsubmit="return confirm('By clicking OK, you are confirming the correctness of your information.')">
 				<label for="name"> Name * : </label>
 				<input type="text" name="name" id="name" required="">
 		
@@ -101,10 +102,11 @@
 				<br>
 				<h4></h4>
 
-				<button>Proceed to payment</button>
+				<button class="submit-button">Proceed to payment</button>
 
 			</form>
 		</div>
+		</main>
 		</div>
 	</body>
 </html>
