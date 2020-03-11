@@ -1,25 +1,59 @@
-<h1>Welcome to the results page</h1>
 
-<h4></h4>
-<div><a href="/"><button>Go back to search</button></a></div>
-<h4></h4>
-<p></p>
-<p></p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Air Prairies</title>
 
+        <%# Eric Meyers CSS reset %> 
+		<link rel="stylesheet" type="text/css" href="/css/css-reset.css">
 
-<% savedresults.forEach(function(result){%>
-    <div>
-        <%
-        for ( var i = 0; i < savedresults.length; i++ )
-        {
+		<%# Custom Style Sheet %>
+		<link rel="stylesheet" type="text/css" href="/css/search-style.css">
+
+		<%# Google fonts %>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Roboto&display=swap" rel="stylesheet">
         
-            %>
+    </head>
+    <body>
+    
+        <div class="container">
+
+            <header>
+
+                <div class="logobox">
+					<img src="/images/ap-white.png" alt="Company logo" height="150px" width="225px">
+				</div>
+
+                <nav>
+                    <a href="/" class="navbutton">Back</a>
+                </nav>
+
+            </header>
+
+            <main>
+                <h1>Welcome to the results page</h1>
+
+                <% savedresults.forEach(function(result){%>
+                <div>
+                    <%
+                    for ( var i = 0; i < savedresults.length; i++ )
+                    {
+        
+                        %>
             
-            	<p value="<%=savedresults[i].id %>"><%-JSON.stringify(savedresults[i]) %> <a href="/info"> <button>book</button> </a> </p><%
+            	        <p value="<%=savedresults[i].id %>"><%-JSON.stringify(savedresults[i]) %> <a href="/info"> <button>book</button> </a> </p><%
         	
-        }
-        %>
-    </div>
+                    }
+                %>
+                </div>
 
-<%}); %>
+                <%}); %>
 
+            </main>
+
+        </div>
+    </body>
+</html>
