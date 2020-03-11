@@ -34,8 +34,7 @@
             </header>
 
             <main>
-                <h1>Welcome to the results page</h1>
-
+                <h1>Search results:</h1>
                 <% savedresults.forEach(function(result){%>
                 <div>
                     <%
@@ -44,14 +43,14 @@
         
                         %>
             
-            	        <p value="<%=savedresults[i].id %>"><%-JSON.stringify(savedresults[i]) %> <a href="/info"> <button>book</button> </a> </p><%
+                        <p value="<%=savedresults[i].id %>"><%-JSON.stringify(savedresults[i]) %> 
+                        <a href="/info"><button class="submit-button">BOOK</button></a> </p><%
         	
                     }
                 %>
                 </div>
 
                 <%}); %>
-
             </main>
 
         </div>

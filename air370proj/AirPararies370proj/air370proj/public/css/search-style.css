@@ -38,3 +38,27 @@ main {
 .navbutton:hover {
     background-color: #ff725c;
 }
+
+.submit-button {
+    background-color: #ff725c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.submit-button:hover {
+    background-color: #ff725cad;
+}
+
+h1 {
+    font-size: 3.25rem;
+    font-family: 'DM Serif Text', serif;
+    margin: 1rem 0;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
