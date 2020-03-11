@@ -28,6 +28,40 @@ main {
     box-sizing: border-box;
 }
 
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    background-color: white;
+    color: #4caf50;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.submit-button:hover {
+    background-color: whitesmoke;
+}
+
+.lines {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.815);
+    padding: 20px 20px 60px 20px;
+    margin-top: 30px;
+}
+
 .navbutton {
     margin-left: 10px;
     font-family: 'DM Serif Text', serif;
@@ -38,3 +72,11 @@ main {
 .navbutton:hover {
     background-color: #ff725c;
 }
+
+h1 {
+    font-size: 3.25rem;
+    font-family: 'DM Serif Text', serif;
+    margin: 1rem 0;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
