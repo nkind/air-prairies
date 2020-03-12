@@ -1,45 +1,78 @@
-<h1>You're almost there !!! </h1>
-<h2>Pay Now to Secure your reservation </h2>
-<p></p>
-<div><a href="/info"><button> Go back to info-page </button></a> </div>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Air Prairies</title>
 
-<div>
-	<form action="/reserved" method="POST" onsubmit="return confirm('Are you sure you want to book !!')">
-		<label for="nameOnCard"> Name On Card * : </label>
-		<input type="text" name="nameOnCard" id="nameOnCard" required="">
+		<%# Eric Meyers CSS reset %> 
+		<link rel="stylesheet" type="text/css" href="/css/css-reset.css">
 
-		<label for="visa"> Visa : </label>
-		<input name="cardType" value="visa" type="radio" required="">
+		<%# Custom Style Sheet %>
+		<link rel="stylesheet" type="text/css" href="/css/payment-style.css">
+
+		<%# Google fonts %>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Roboto&display=swap" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+
+				<div class="logobox">
+					<img src="/images/ap-white.png" alt="Company logo" height="150px" width="225px">
+				</div>
+
+				<nav>
+					<a href="/info" class="navbutton">BACK</a>
+				</nav>
+			</header>
+
+			<main>	
+
+				<h1>Payment Information</h1>
+				<p>All data entered is secure and will not be saved</p>
+
+
+				<div class="lines">
+					<form action="/reserved" method="POST" onsubmit="return confirm('Are you sure?')">
+						<label for="nameOnCard"> Name On Card * : </label>
+						<input type="text" name="nameOnCard" id="nameOnCard" required="">
+
+						<label for="visa"> Visa : </label>
+						<input name="cardType" value="visa" type="radio" required="">
 		
 
-		<label for="mastercard"> MasterCard : </label>
-		<input name="cardType" value="mastercard" type="radio" required="">
-		<p></p>
+						<label for="mastercard"> MasterCard : </label>
+						<input name="cardType" value="mastercard" type="radio" required="">
+						<p></p>
 
-		<br>
+						<br>
 
-		<label for="cardnumber"> Card Number *  : </label>
-		<input type="text" name="cardnumber" id="cardnumber" required="">
+						<label for="cardnumber"> Card Number *  : </label>
+						<input type="text" name="cardnumber" id="cardnumber" required="">
 
-		<label for="expiry"> Expiry Date *  : </label>
-		<input type="text" name="expiry" id="expiry" required="">
+						<label for="expiry"> Expiry Date *  : </label>
+						<input type="text" name="expiry" id="expiry" required="">
 
-		<label for="cvv"> CVV *  : </label>
-		<input type="text" name="cvv" id="cvv" required="">
+						<label for="cvv"> CVV *  : </label>
+						<input type="text" name="cvv" id="cvv" required="">
 
-		<br>
-		<h4></h4>
+						<br>
+						<h4></h4>
 
-		<button> Reserve </button>
+						<button class="submit-button"> Reserve </button>
 
 		
 
 
-	</form>
+					</form>
 
 
-</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

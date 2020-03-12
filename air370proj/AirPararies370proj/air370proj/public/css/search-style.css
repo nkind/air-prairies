@@ -1,0 +1,64 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(#f4d03f, #16a085);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.125rem;
+}
+
+.container {
+    width: 1024px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+main {
+    box-sizing: border-box;
+}
+
+.navbutton {
+    margin-left: 10px;
+    font-family: 'DM Serif Text', serif;
+    border: 2px solid white;
+    padding: 10px 30px;
+}
+
+.navbutton:hover {
+    background-color: #ff725c;
+}
+
+.submit-button {
+    background-color: #ff725c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.submit-button:hover {
+    background-color: #ff725cad;
+}
+
+h1 {
+    font-size: 3.25rem;
+    font-family: 'DM Serif Text', serif;
+    margin: 1rem 0;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}

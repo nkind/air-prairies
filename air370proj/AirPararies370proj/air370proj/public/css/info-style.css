@@ -1,0 +1,118 @@
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: linear-gradient(#f4d03f, #16a085);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.125rem;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 1024px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+main {
+    box-sizing: border-box;
+}
+
+/* Change form layout to give space for each input */
+input[type=text], select {
+    width: 99%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    width: 99%;
+    background-color: #ff725c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'DM Serif Text', serif;
+    font-size: 1rem;
+    margin-top: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.submit-button:hover {
+    background-color: #ff725cad;
+}
+
+/* Create box around form */
+.lines {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.815);
+    padding: 20px 20px 30px 20px;
+    margin-top: 30px;
+}
+
+.navbutton {
+    margin-left: 10px;
+    font-family: 'DM Serif Text', serif;
+    border: 2px solid white;
+    padding: 10px 30px;
+}
+
+.navbutton:hover {
+    background-color: #ff725c;
+}
+
+h1 {
+    font-size: 3.25rem;
+    font-family: 'DM Serif Text', serif;
+    margin: 1rem 0;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'DM Serif Text', serif;
+    margin-top: 10px;
+}
+
+/* Make form scrollable so it does not overflow the page */
+form {
+    height: 400px;
+    overflow-y: auto;
+}
+
+/* webkit to customize the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
