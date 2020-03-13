@@ -35,24 +35,48 @@
 
             <main>
                 <h1>Search results:</h1>
-                <% savedresults.forEach(function(result){%>
                 <div>
-                    <%
-                    for ( var i = 0; i < savedresults.length; i++ )
-                    {
-        
-                        %>
-            
-                        <p value="<%=savedresults[i].id %>"><%-JSON.stringify(savedresults[i]) %> 
-                        <a href="/info"><button class="submit-button">BOOK</button></a> </p><%
-        	
-                    }
-                %>
-                </div>
-
-                <%}); %>
+                    <% for ( var i = 0; i < savedresults.length; i++ ) {%>
+                            
+                            
+                            <ul>
+                                <li value="<%=(savedresults[i].flightnumber) %>"><%=(("flightnumber") +": "+savedresults[i].flightnumber) %></li>
+                                    
+                                <li value="<%=(savedresults[i].origin) %>"><%=(("origin") +": "+savedresults[i].origin) %></li>
+                    
+                                <li value="<%=(savedresults[i].destination) %>"><%=(("destination") +": "+savedresults[i].destination) %></li>
+                    
+                                <li value="<%=(savedresults[i].depart_localtime) %>"><%=(("depart_localtime") +": "+savedresults[i].depart_localtime) %></li>
+                    
+                                <li value="<%=(savedresults[i].arrival_localtime) %>"><%=(("arrival_localtime") +": "+savedresults[i].arrival_localtime) %></li>
+                    
+                                <li value="<%=(savedresults[i].length) %>"><%=(("length") +": "+savedresults[i].length) %></li>
+                    
+                                <li value="<%=(savedresults[i].airplane_type) %>"><%=(("airplane_type") +": "+savedresults[i].airplane_type) %></li>
+                    
+                    
+                                <li id = "<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>" value="<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>"><%=(savedresults[i].cost) %></li>
+                    
+                    
+                                    <%/* script to calulate the cost  */%>
+                    
+                                <script>
+                                    save = document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML
+                                    save = save.split('-')
+                                    console.log(save)
+                    
+                                    document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML = "cost: " + (Math.floor(Math.random() * (Number(save[1]) - Number(save[0]) + 1)) + Number(save[0]))
+                                    console.log("reached")
+                                </script>
+                    
+                                    
+                            </ul>
+                        <%}%>
+                            
+                    </div>
             </main>
 
         </div>
+        <a href="/info"><button class="submit-button">BOOK</button></a>
     </body>
 </html>

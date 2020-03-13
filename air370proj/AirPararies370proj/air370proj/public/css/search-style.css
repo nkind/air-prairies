@@ -24,10 +24,6 @@ header {
     border-bottom: 1px solid lightgray;
 }
 
-main {
-    box-sizing: border-box;
-}
-
 .navbutton {
     margin-left: 10px;
     font-family: 'DM Serif Text', serif;
