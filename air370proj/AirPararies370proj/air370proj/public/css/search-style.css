@@ -35,6 +35,17 @@ header {
     background-color: #ff725c;
 }
 
+main {
+    box-sizing: border-box;
+}
+
+.box {
+    min-height: 300px;
+    display: flex;
+
+
+}
+
 .submit-button {
     background-color: #ff725c;
     color: white;
@@ -42,10 +53,12 @@ header {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    float: right;
+    align-items: center;
     font-family: 'DM Serif Text', serif;
     font-size: 1rem;
     margin-top: 5px;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 .submit-button:hover {
@@ -57,4 +70,60 @@ h1 {
     font-family: 'DM Serif Text', serif;
     margin: 1rem 0;
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+ul {
+    padding: 0 2%;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0, .8);
+}
+
+ul:hover {
+    box-shadow:0 5px 10px rgba(0,0,0,.15);
+}
+
+ul li {
+    position: relative;
+    height: 3em;
+    color:black;
+    letter-spacing: 1px;
+}
+
+ul li:before {
+    content: ".";
+    display: inline-block;
+    height: 3em;
+    width: 1px;
+    color: black;
+    background: black;
+    padding-left: 0;
+    position: absolute;
+    left: -11px;
+    top: -0.1em;
+}
+
+ul:before {
+    content: "●";
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: -.9em;
+    top: 0.1em;
+    color:black;
+}
+
+ul:after {
+    content: "●";
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: -.9em;
+    top: -.9em;
+    color: black;
 }
