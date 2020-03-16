@@ -1,0 +1,38 @@
+<h1>Welcome to the results page</h1>
+
+<h4></h4>
+<div><a href="/search"><button>Go back to search</button></a></div>
+<h4></h4>
+<p></p>
+<p></p>
+
+
+<div>
+<% for ( var i = 0; i < ref_info.length; i++ ) {%>
+        
+        
+        <ul>
+            <li value="<%=(ref_info[i].flightnumber) %>"><%=(("flightnumber") +": "+ref_info[i].flightnumber) %></li>
+                
+            <li value="<%=(ref_info[i].origin) %>"><%=(("origin") +": "+ref_info[i].origin) %></li>
+
+            <li value="<%=(ref_info[i].destination) %>"><%=(("destination") +": "+ref_info[i].destination) %></li>
+
+            <li value="<%=(ref_info[i].depart_localtime) %>"><%=(("depart_localtime") +": "+ref_info[i].depart_localtime) %></li>
+
+            <li value="<%=(ref_info[i].arrival_localtime) %>"><%=(("arrival_localtime") +": "+ref_info[i].arrival_localtime) %></li>
+
+            <li value="<%=(ref_info[i].length) %>"><%=(("length") +": "+ref_info[i].length) %></li>
+
+            <li value="<%=(ref_info[i].airplane_type) %>"><%=(("airplane_type") +": "+ref_info[i].airplane_type) %></li>
+
+
+
+
+
+                
+        </ul>
+    <%}%>
+        
+</div>
+

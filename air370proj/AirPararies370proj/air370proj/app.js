@@ -1,4 +1,4 @@
-var nodemailer = require('nodemailer');
+var nodemailer = require("nodemailer");
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
@@ -226,13 +226,89 @@ app.get("/payment", function(req, res){
 
 });
 
-
-
 app.post("/reserved", function(req, res){
-    res.render("reserved");
+    let sql = `SELECT MAX(bookingId) as save from bookings`
 
+    var book_ref 
+    console.log("reached")
+    console.log(flightinfo)
+    console.log(ref_info)
+    db.all(sql,function(err,row){
+        book_ref = row
+        console.log(book_ref[0].save)
+
+        
+     res.render("reserved");
+
+     var transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, // use SSL
+    
+    auth:{
+        user: 'airprairies@gmail.com',
+        pass: 'ajnw#0206'
+    }
+})
+
+var mailOptions = {
+    from: 'jordan.liao12@gmail.com',
+    to: `${paymentinfo[0].email},`,
+    subject:'confirm',
+    text: `your booking has now been confirmed. Your booking reference is ${book_ref[0].save} and your flight number is ${flightinfo.flightnumber} Thank you for flying with us` 
+};
+
+console.log("hello")
+transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+}) 
 
 });
+
+app.get('/reserved', function(req, res){
+
+})
+
+
+
+// render the reference page.
+var ref_info = []
+
+app.get('/reference', function(req, res){
+    res.render('reference')
+})
+
+app.post('/reference', function(req, res){
+    var flightnumber = req.body.flightnumber
+    var bookingid = req.body.bookingid
+    var save = {flightnumber:flightnumber, bookingid:bookingid}
+
+    ref_info.push(save);   
+    res.redirect("/result")
+})
+
+app.get('/result', function(req, res){
+    
+    console.log(ref_info[0].bookingid)
+    if (ref_info != []){
+    let sql =  `SELECT OneWayFlights.* FROM OneWayFlights 
+                JOIN Bookings on OneWayFlights.flightnumber = Bookings.flightnumber
+                WHERE Bookings.bookingid = '${ref_info[0].bookingid}' `
+    
+    db.all(sql,function(err,row){
+        console.log(row)
+        if (err) throw err;
+        res.render('result', {ref_info:row });
+        })
+    }
+
+})
+
 
 
 app.listen(2020, function(){
