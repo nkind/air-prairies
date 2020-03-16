@@ -53,12 +53,12 @@ main {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    align-items: center;
     font-family: 'DM Serif Text', serif;
-    font-size: 1rem;
-    margin-top: 5px;
+    font-size: 2rem;
+    margin-top: 10px;
     display: inline-block;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .submit-button:hover {
