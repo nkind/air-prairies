@@ -40,19 +40,19 @@
                             
                             
                             <ul>
-                                <li value="<%=(savedresults[i].flightnumber) %>"><%=(("flightnumber") +": "+savedresults[i].flightnumber) %></li>
+                                <li value="<%=(savedresults[i].flightnumber) %>"><%=(("Flight Number") +": "+savedresults[i].flightnumber) %></li>
                                     
-                                <li value="<%=(savedresults[i].origin) %>"><%=(("origin") +": "+savedresults[i].origin) %></li>
+                                <li value="<%=(savedresults[i].origin) %>"><%=(("Origin") +": "+savedresults[i].origin) %></li>
                     
-                                <li value="<%=(savedresults[i].destination) %>"><%=(("destination") +": "+savedresults[i].destination) %></li>
+                                <li value="<%=(savedresults[i].destination) %>"><%=(("Destination") +": "+savedresults[i].destination) %></li>
                     
-                                <li value="<%=(savedresults[i].depart_localtime) %>"><%=(("depart_localtime") +": "+savedresults[i].depart_localtime) %></li>
+                                <li value="<%=(savedresults[i].depart_localtime) %>"><%=(("Depart Local Time") +": "+savedresults[i].depart_localtime) %></li>
                     
-                                <li value="<%=(savedresults[i].arrival_localtime) %>"><%=(("arrival_localtime") +": "+savedresults[i].arrival_localtime) %></li>
+                                <li value="<%=(savedresults[i].arrival_localtime) %>"><%=(("Arrival Local Time") +": "+savedresults[i].arrival_localtime) %></li>
                     
-                                <li value="<%=(savedresults[i].length) %>"><%=(("length") +": "+savedresults[i].length) %></li>
+                                <li value="<%=(savedresults[i].length) %>"><%=(("Length") +": "+savedresults[i].length) %></li>
                     
-                                <li value="<%=(savedresults[i].airplane_type) %>"><%=(("airplane_type") +": "+savedresults[i].airplane_type) %></li>
+                                <li value="<%=(savedresults[i].airplane_type) %>"><%=(("Airplane Type") +": "+savedresults[i].airplane_type) %></li>
                     
                     
                                 <li id = "<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>" value="<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>"><%=(savedresults[i].cost) %></li>
@@ -64,7 +64,7 @@
                                     save = save.split('-')
                                     console.log(save)
                     
-                                    document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML = "cost: " + (Math.floor(Math.random() * (Number(save[1]) - Number(save[0]) + 1)) + Number(save[0]))
+                                    document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML = "Cost: " + (Math.floor(Math.random() * (Number(save[1]) - Number(save[0]) + 1)) + Number(save[0]))
                                     console.log("reached")
                                 </script>
                             </ul>
