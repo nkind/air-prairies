@@ -22,7 +22,7 @@ npm install ejs<br>**
 
 
 Finally, run **'node app.js'** in the terminal to start the server. <br>
-The localhost will be listening at: http://localhost:2020/search
+The localhost will be listening at: http://localhost:2020/
 
 **Current Restrictions**
 
