@@ -1,5 +1,5 @@
-html {
-    height: 100%
+html{
+    height: 100%;
 }
 
 body {
@@ -69,6 +69,11 @@ main {
     background-position: bottom;
     min-height: 250px;
     width: 30%;
+}
+
+.card1, .card2, .card3 {
+    padding: 30px 30px 20px 30px;
+    box-sizing: border-box;
 }
 
 h1 {

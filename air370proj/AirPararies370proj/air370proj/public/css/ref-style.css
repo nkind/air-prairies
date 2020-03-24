@@ -1,9 +1,9 @@
 html {
-    height: 100%;
+    height: 100vh;
 }
 
 body {
-    background-image:linear-gradient(#F4D03F, #16A085);
+    background-image: linear-gradient(#F4d03f, #16A085);
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 1.125rem;
@@ -20,12 +20,21 @@ body {
 header {
     display: flex;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
     justify-content: space-between;
     border-bottom: 1px solid lightgray;
 }
 
+.navbutton {
+    margin-left: 10px;
+    font-family: 'DM Serif Text', serif;
+    border: 2px solid white;
+    padding: 10px 30px;
+}
+
+.navbutton:hover {
+    background-color: #ff725c;
+}
 
 main {
     box-sizing: border-box;
@@ -33,16 +42,16 @@ main {
 
 label {
     padding: 12px 12px 12px 0;
-    display: inline-block;
 }
 
-/* Styling for both dropdown boxes */
-.origin, .destination {
+input[type=text] {
     width: 100%;
-    padding: 12px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    resize: vertical;
+    box-sizing: border-box;
 }
 
 .submit-button {
@@ -52,60 +61,39 @@ label {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    float: right;
     font-family: 'DM Serif Text', serif;
     font-size: 1rem;
+    margin-top: 15px;
 }
 
 .submit-button:hover {
     background-color: #ff725cad;
 }
 
-/* container for lines in the form */
+/* Form style */
 .lines {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.815);
-    padding: 20px 20px 60px 20px;
+    padding: 20px 20px 20px 20px;
     margin-top: 30px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.navbutton {
-    margin-left: 10px;
-    font-family: 'DM Serif Text', serif;
-    border: 2px solid white;
-    padding: 10px 30px; 
-}
-
-.navbutton:hover {
-    background-color: #FF725C;
-}
-
-/* customize date box and add calendar icon */
-[type="date"] {
-    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
-}
-
-[type="date"]::-webkit-inner-spin-button {
-    display: none;
-}
-
-[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
-}
-
-
-.line3 input {
+.booking input {
     border: 1px solid #c4c4c4;
     border-radius: 5px;
     background-color: #fff;
-    padding: 3px 5px;
+    padding: 10px 5px;
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
-    width: 190px;
+    width: 100%;
 }
+
 
 h1 {
     font-size: 3.25rem;
     font-family: 'DM Serif Text', serif;
     margin: 1rem 0;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5)
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
