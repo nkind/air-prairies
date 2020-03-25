@@ -1,7 +1,6 @@
 # CMPT370-Fantastic 4
 
 
-<hr>
 
 ## Getting Started
 
