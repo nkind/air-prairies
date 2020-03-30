@@ -1,6 +1,4 @@
-html {
-    height: 100%;
-}
+
 
 body {
     background-image: linear-gradient(#f4d03f, #16a085);
@@ -55,7 +53,7 @@ main {
     cursor: pointer;
     font-family: 'DM Serif Text', serif;
     font-size: 2rem;
-    margin-top: 10px;
+    margin: 10px 0;
     display: inline-block;
     box-sizing: border-box;
     width: 100%;
