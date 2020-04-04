@@ -95,6 +95,15 @@ form {
     overflow-y: auto;
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #F4D03f;
+}
+
 /* webkit to customize the scrollbar */
 ::-webkit-scrollbar {
     width: 10px;

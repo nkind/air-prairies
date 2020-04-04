@@ -79,3 +79,12 @@ h1 {
     margin: 1rem 0;
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #F4D03f;
+}

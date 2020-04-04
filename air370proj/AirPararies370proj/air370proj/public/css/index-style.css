@@ -3,7 +3,9 @@ html {
 }
 
 body {
-    background-image:linear-gradient(#F4D03F, #16A085);
+    /*background-image:linear-gradient(#F4D03F, #16A085);*/
+    background-image: url(/images/AirPrairies.jpg);
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 1.125rem;
@@ -12,7 +14,6 @@ body {
 .container {
     width: 1024px;
     min-height: 300px;
-    max-height: 350px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -64,7 +65,7 @@ label {
 /* container for lines in the form */
 .lines {
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: rgba(0, 0, 0, 0.45);
     padding: 20px 20px 60px 20px;
     margin-top: 30px;
 }
@@ -108,4 +109,21 @@ h1 {
     font-family: 'DM Serif Text', serif;
     margin: 1rem 0;
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5)
+}
+
+/*
+.full {
+    background-image: url(/images/AirPrairies.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 104px;
+}
+*/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #F4D03f;
 }

@@ -12,6 +12,7 @@ body {
     min-height: 300px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 header {
@@ -26,12 +27,17 @@ main {
     min-height: 300px;
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 
 /* herobox 1 and 2 display first above the cards */
 .herobox1 {
     flex: 2;
     padding-right: 100px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px 20px 60px 20px;
+    margin-top: 30px;
 }
 
 .herobox2 {
@@ -43,6 +49,7 @@ main {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    
 }
 
 .card1 {
@@ -73,6 +80,10 @@ main {
     padding: 30px 30px 20px 30px;
     box-sizing: border-box;
     margin-bottom: 100px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px 20px 60px 20px;
+    margin-top: 30px;
 }
 
 h1 {
@@ -108,4 +119,13 @@ p {
 
 .navbutton:hover {
     background-color: #ff725c;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #F4D03f;
 }

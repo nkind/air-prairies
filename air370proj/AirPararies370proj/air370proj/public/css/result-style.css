@@ -105,3 +105,12 @@ ul:after {
     top: -.9em;
     color: black;
 }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #F4D03f;
+}
