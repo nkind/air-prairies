@@ -67,7 +67,7 @@ Note: if the warning "Permission Denied" is shown, has to re-run command line to
 
 **To Start the Application**:
 
-Run app.js using command line
+Run **app.js** using command line
 
 ```
 node app.js
