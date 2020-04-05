@@ -43,7 +43,7 @@ Navigate to the **cmpt370-fantastic-4** folder that contains **app.js** in the t
 cmpt370-fantastic-4/
 ```
 
-**Setting Up Required Node Modules**:
+**Setting Up the Required Node Modules**:
 
 **First**, use npm to create an empty package
 
