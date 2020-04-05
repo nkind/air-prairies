@@ -65,7 +65,7 @@ npm i nodemailer
 Note: if the warning "Permission Denied" is shown, has to re-run command line tool(s)
       as an administrator or Sudo in Mac Os as indicated previously and repeat the above steps
 
-**To Start the Application**
+**To Start the Application**:
 
 Run app.js using command line
 
