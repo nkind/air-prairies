@@ -31,7 +31,7 @@ Clone the git master branch using the command line tool(s)
 git clone https://git.cs.usask.ca/yol474/cmpt370-fantastic-4.git
 ```
 
-Or use the Github Desktop to clone a repository to a designated path by entering the below URL
+Or use the GitHub Desktop to clone a repository to a designated path by entering the below URL
 
 ```
 https://git.cs.usask.ca/yol474/cmpt370-fantastic-4.git
