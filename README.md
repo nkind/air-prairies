@@ -17,7 +17,7 @@ Initially, download and install nodejs
 https://nodejs.org/en/download/
 ```
 
-**How to Run the Application**:
+### How to Run
 
 Command line tool(s) must be used: Windows PowerShell or Mac Terminal
 
@@ -65,7 +65,8 @@ npm i nodemailer
 Note: if showing warning "Permission Denied", has to re-run command line tool(s)
       as an administrator or Sudo in Mac Os as indicated previously and repeat the above steps
 
-**Last**, run app.js using command line
+**To Start the Application**
+Run app.js using command line
 
 ```
 node app.js
