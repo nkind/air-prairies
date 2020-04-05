@@ -769,50 +769,80 @@ app.get("/payment", function(req, res){
 
 
 app.post("/reserved", function(req, res){
-    let sql = `SELECT MAX(bookingId) as save from bookings`
 
-    var book_ref 
-    console.log("reached")
-    db.all(sql,function(err,row){
-        book_ref = row
-        console.log(book_ref[0].save)
+ // total number of flight in current booking.
+ var numflight = paymentinfo[0].flightnumber.length
+ console.log("totalnumber of flight: " + numflight)
 
-        
-     res.render("reserved");
+ let sql = `SELECT bookingId 
+ FROM bookings
+ ORDER BY bookingId DESC
+ LIMIT ${numflight}`
 
-     var transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true, // use SSL
-    
-    auth:{
-        user: 'airprairies@gmail.com',
-        pass: 'ajnw#0206'
-    }
+ var book_ref = [] 
+ console.log("reached")
+ db.all(sql,function(err,row){
+ book_ref.push(row)
+ console.log(book_ref[0].save)
+ 
+
+ var transporter = nodemailer.createTransport({
+ host: 'smtp.gmail.com',
+ port: 465,
+ secure: true, // use SSL
+ 
+ auth:{
+ user: 'airprairies@gmail.com',
+ pass: 'ajnw#0206'
+ }
 })
 
+
+console.log(row[0].bookingid)
 var mailOptions = {
-    from: 'airprairies@gmail.com',
-    to: `${paymentinfo[0].email},`,
-    subject:'confirm',
-    text: `your booking has now been confirmed. Your booking reference is ${book_ref[0].save} and your flight number is ${flightinfo.flightnumber} Thank you for flying with us` 
+ from: 'airprairies@gmail.com',
+ to: `${paymentinfo[0].email},`,
+ subject:'confirm',
+ text: 
+
+
+ `
+ Dear ${paymentinfo[0].name},
+
+ Your booking has now been confirmed. 
+ 
+ Your booking reference is ${(JSON.stringify(row))} and your flight number is ${paymentinfo[0].flightnumber}.
+ 
+ You can check your bookings here http://localhost:2020/reference.
+
+ Thank you for flying with us.
+ 
+Yours,
+Air Prairies
+`
+
 };
 
 console.log("hello")
 transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
+ if (error) {
+ console.log(error);
+ } else {
+ console.log('Email sent: ' + info.response);
+ }
+ });
 }) 
 
+ res.redirect('reserved')
 });
 
+// get the reserved page
 app.get('/reserved', function(req, res){
 
+    res.render("reserved", {paymentinfo:paymentinfo});
+
 })
+
 
 
 // render the reference page.
