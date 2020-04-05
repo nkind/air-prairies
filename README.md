@@ -62,7 +62,7 @@ npm i express
 npm i ejs
 npm i nodemailer
 ```
-Note: if showing warning "Permission Denied", has to re-run command line tool(s)
+Note: if the warning "Permission Denied" is shown, has to re-run command line tool(s)
       as an administrator or Sudo in Mac Os as indicated previously and repeat the above steps
 
 **To Start the Application**
