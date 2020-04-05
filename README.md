@@ -75,7 +75,7 @@ node app.js
 
 Application will be live on port 2020
 
-Enter below URL into your browser, Google Chrome recommended
+Enter below URL into your browser, **Google Chrome** recommended
 
 ```
 localhost:2020/
