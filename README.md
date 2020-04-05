@@ -11,26 +11,31 @@ nodejs, sqlite3, express, ejs, nodemailer
 ```
 
 ### Installing
-
-How to run the application:
-
-Clone the git branch
-
-```
-git clone https://git.cs.usask.ca/yol474/cmpt370-fantastic-4.git
-```
-
-Download and install nodejs
+Initially, download and install nodejs
 
 ```
 https://nodejs.org/en/download/
 ```
 
-Using command line tool(s): Windows PowerShell or Mac Terminal
+How to run the application:
 
-Note: Must run the command line tool(s) as an administrator or Sudo in Mac Os
+Command line tool(s) must be used: Windows PowerShell or Mac Terminal
 
-Navigate to the **cmpt370-fantastic-4** folder that contains **app.js**
+Note: Must run the command line tool(s) as an administrator or Sudo in Mac OS
+
+Clone the git master branch using the command line tool(s)
+
+```
+git clone https://git.cs.usask.ca/yol474/cmpt370-fantastic-4.git
+```
+
+Or use the Github Desktop to clone a repository by entering the below URL
+
+```
+https://git.cs.usask.ca/yol474/cmpt370-fantastic-4.git
+```
+
+Navigate to the **cmpt370-fantastic-4** folder that contains **app.js** in the the command line tool(s)
 
 ```
 cmpt370-fantastic-4/app.js
