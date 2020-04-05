@@ -25,7 +25,7 @@ Note: Must run the command line tool(s) as an administrator or Sudo in Mac OS
 
 **Cloning the Project**:
 
-Clone the git master branch using the command line tool(s)
+Clone the git **master** branch using the command line tool(s)
 
 ```
 git clone https://git.cs.usask.ca/yol474/cmpt370-fantastic-4.git
@@ -66,6 +66,7 @@ Note: if showing warning "Permission Denied", has to re-run command line tool(s)
       as an administrator or Sudo in Mac Os as indicated previously and repeat the above steps
 
 **To Start the Application**
+
 Run app.js using command line
 
 ```
