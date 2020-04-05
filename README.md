@@ -17,11 +17,13 @@ Initially, download and install nodejs
 https://nodejs.org/en/download/
 ```
 
-How to run the application:
+**How to run the application**:
 
 Command line tool(s) must be used: Windows PowerShell or Mac Terminal
 
 Note: Must run the command line tool(s) as an administrator or Sudo in Mac OS
+
+**Cloning the Project**:
 
 Clone the git master branch using the command line tool(s)
 
@@ -41,7 +43,9 @@ Navigate to the **cmpt370-fantastic-4** folder that contains **app.js** in the t
 cmpt370-fantastic-4/app.js
 ```
 
-First, use npm to create an empty package
+**Setting up required node modules**:
+
+**First**, use npm to create an empty package
 
 ```
 npm init
@@ -50,7 +54,7 @@ Keep pressing "Enter" until you see "Is this OK? (yes)"
 
 Enter "yes" to continue
 
-Second, use npm to install the following requirements
+**Second**, use npm to install the following requirements
 
 ```
 npm i sqlite3
@@ -61,13 +65,15 @@ npm i nodemailer
 Note: if showing warning "Permission Denied", has to re-run command line tool(s)
       as an administrator or Sudo in Mac Os as indicated previously and repeat the above steps
 
-Last, run app.js using command line
+**Last**, run app.js using command line
 
 ```
 node app.js
 ```
 
 Application will be live on port 2020
+
+Enter below URL into your browser, Google Chrome recommended
 
 ```
 localhost:2020/
