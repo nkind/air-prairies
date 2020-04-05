@@ -8,11 +8,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.0.1",
+    "ejs": "^3.0.2",
     "express": "^4.17.1",
     "nodemailer": "^6.4.6",
     "sqlite3": "^4.1.1"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://git.cs.usask.ca/yol474/cmpt370-fantastic-4.git"
+  },
   "description": ""
 }
