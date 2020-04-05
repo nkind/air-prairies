@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Air Prairies</title>
+
+        <%# Eric Meyers CSS reset %> 
+		<link rel="stylesheet" type="text/css" href="/css/css-reset.css">
+
+		<%# Custom Style Sheet %>
+		<link rel="stylesheet" type="text/css" href="/css/search-style.css">
+
+		<%# Google fonts %>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Roboto&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+    
+        <div class="container">
+
+            <header>
+
+                <div class="logobox">
+					<img src="/images/ap-white.png" alt="Company logo" height="150px" width="225px">
+				</div>
+
+                <nav>
+                    <a href="/" class="navbutton">BACK</a>
+                </nav>
+
+            </header>
+
+            <main>
+                <h1>Search Results:</h1>
+                <div class="box">
+                    <% for ( var i = 0; i < savedresults.length; i++ ) {%>
+                            
+                            
+                            <ul>
+                                <li value="<%=(savedresults[i].flightnumber) %>"><%=(("Flight Number") +": "+savedresults[i].flightnumber) %></li>
+                                    
+                                <li value="<%=(savedresults[i].origin) %>"><%=(("Origin") +": "+savedresults[i].origin) %></li>
+                    
+                                <li value="<%=(savedresults[i].destination) %>"><%=(("Destination") +": "+savedresults[i].destination) %></li>
+                    
+                                <li value="<%=(savedresults[i].depart_localtime) %>"><%=(("Depart Local Time") +": "+savedresults[i].depart_localtime) %></li>
+                    
+                                <li value="<%=(savedresults[i].arrival_localtime) %>"><%=(("Arrival Local Time") +": "+savedresults[i].arrival_localtime) %></li>
+                    
+                                <li value="<%=(savedresults[i].length) %>"><%=(("Length") +": "+savedresults[i].length) %></li>
+                    
+                                <li value="<%=(savedresults[i].airplane_type) %>"><%=(("Airplane Type") +": "+savedresults[i].airplane_type) %></li>
+                    
+                    
+                                <li id = "<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>" value="<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>"><%=(savedresults[i].cost) %></li>
+                    
+                                    <%/* script to calulate the cost  */%>
+                    
+                                <script>
+                                    save = document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML
+                                    save = save.split('-')
+                                    console.log(save)
+                    
+                                    document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML = "Cost: " + (Math.floor(Math.random() * (Number(save[1]) - Number(save[0]) + 1)) + Number(save[0]))
+                                    console.log("reached")
+                                </script>
+                            </ul>
+                        <%}%>
+                    </div>
+                    <a href="/info"><button class="submit-button">BOOK</button></a>
+
+            </main>
+
+        </div>
+
+    </body>
+    <footer></footer>
+</html>

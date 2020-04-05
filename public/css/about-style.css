@@ -1,0 +1,131 @@
+
+
+body {
+    background-image: linear-gradient(#F4D03f, #16a085);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.125rem;
+}
+
+.container {
+    width: 1024px;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+
+main {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* herobox 1 and 2 display first above the cards */
+.herobox1 {
+    flex: 2;
+    padding-right: 100px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px 20px 60px 20px;
+    margin-top: 30px;
+}
+
+.herobox2 {
+    flex: 1;
+}
+
+/* cards make up the bottom row of the page */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+}
+
+.card1 {
+    background-image: url(/images/bg-1.png);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;
+}
+
+.card2 {
+    background-image: url(/images/bg-2.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;
+}
+
+.card3 {
+    background-image: url(/images/bg-3.jpg);
+    background-size: cover;
+    background-position: bottom;
+    min-height: 250px;
+    width: 30%;
+}
+
+.card1, .card2, .card3 {
+    padding: 30px 30px 20px 30px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px 20px 60px 20px;
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'DM Serif Text', serif;
+    margin-bottom: 1rem;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, .35);
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'DM Serif Text', serif;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.cards p {
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    margin-top: 10px;
+}
+
+.navbutton {
+    margin-left: 10px;
+    font-family: 'DM Serif Text', serif;
+    border: 2px solid white;
+    padding: 10px 30px;
+}
+
+.navbutton:hover {
+    background-color: #ff725c;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #F4D03f;
+}
