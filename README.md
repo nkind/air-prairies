@@ -17,7 +17,7 @@ Initially, download and install nodejs
 https://nodejs.org/en/download/
 ```
 
-**How to run the application**:
+**How to Run the Application**:
 
 Command line tool(s) must be used: Windows PowerShell or Mac Terminal
 
@@ -40,10 +40,10 @@ https://git.cs.usask.ca/yol474/cmpt370-fantastic-4.git
 Navigate to the **cmpt370-fantastic-4** folder that contains **app.js** in the the command line tool(s)
 
 ```
-cmpt370-fantastic-4/app.js
+cmpt370-fantastic-4/
 ```
 
-**Setting up required node modules**:
+**Setting Up Required Node Modules**:
 
 **First**, use npm to create an empty package
 
