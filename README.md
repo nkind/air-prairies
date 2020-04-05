@@ -26,23 +26,37 @@ Download and install nodejs
 https://nodejs.org/en/download/
 ```
 
-Navigate to the **air370proj** folder that contains **app.js**
+Using command line tool(s): Windows PowerShell or Mac Terminal
+
+Note: Must run the command line tool(s) as an administrator or Sudo in Mac Os
+
+Navigate to the **cmpt370-fantastic-4** folder that contains **app.js**
 
 ```
-cmpt370-fantastic-4\air370proj\AirPararies370proj\air370proj
+cmpt370-fantastic-4/app.js
 ```
 
-Use npm to install the following requirements.
+First, use npm to create an empty package
 
 ```
 npm init
+```
+Keep pressing "Enter" until you see "Is this OK? (yes)"
+
+Enter "yes" to continue
+
+Second, use npm to install the following requirements
+
+```
 npm i sqlite3
 npm i express
 npm i ejs
 npm i nodemailer
 ```
+Note: if showing warning "Permission Denied", has to re-run command line tool(s)
+      as an administrator or Sudo in Mac Os as indicated previously and repeat the above steps
 
-Run app.js using command line
+Last, run app.js using command line
 
 ```
 node app.js
