@@ -55,7 +55,7 @@ h2 {
 /* size the plane icon as if it were text */
 main i {
     font-size: 300px;
-    margin: 100px 0 100px 325px;
+    margin: 100px 0 0 300px;
 }
 
 /* Apply animation from cssanimations.io to the place icon */
