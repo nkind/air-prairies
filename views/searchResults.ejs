@@ -36,357 +36,39 @@
             <main>
                 <h1>Search Results:</h1>
                 <div class="box">
-                   
-                <% if (choice =='oneway'){
-                    if (savedresults.length==3){
-                        savedresults.reverse();
-                        for ( var i = 0; i < savedresults.length; i++ ){
-
-                            if (savedresults[i].origin===origin && savedresults[0].origin!= origin){
-                                var temp = savedresults[0];
-                                savedresults[0] =savedresults[i];
-                                savedresults[i]= temp;
-                            } else if (savedresults[i].destination===destination && savedresults[savedresults.length-1].destination!=destination){
-                                var temp2 = savedresults[savedresults.length-1];
-                                savedresults[savedresults.length-1]= savedresults[i];
-                                savedresults[i]= temp2;
-                            }   
-
-                            }
-
-                        } else{
-
-                            if (savedresults[0].origin!=origin){
-                                savedresults.reverse();
-
-                            }
-
-
-
-
-                        }
-
-                } %>
-
-
-
-                <%if (choice==='round'){
-
-                    if (savedresults.length==6){
-
-                        console.log("length=six");
-
-                        for ( var i = 0; i < savedresults.length; i++ ){
-
-
-                            if (savedresults[i].origin===origin && savedresults[0].origin!= origin){
-                                var temp = savedresults[0];
-                                savedresults[0] =savedresults[i];
-                                savedresults[i]= temp;
-
-                            } 
-                            else if (savedresults[i].origin ==='Calgary' &&  savedresults[i].destination==='Saskatoon' && savedresults[1].origin!='Calgary' && savedresults[1].destination!='Saskatoon'){
-                                var temp1= savedresults[1];
-                                savedresults[1]= savedresults[i];
-                                savedresults[i]= temp1;
-
-                            }
-
-
-                            else if (savedresults[i].destination===destination && savedresults[2].destination!=destination){
-                                var temp2 = savedresults[2];
-                                savedresults[2]= savedresults[i];
-                                savedresults[i]= temp2;
-
-                            } 
-
-                            else if (savedresults[i].origin===destination && savedresults[3].origin!= destination){
-                                var temp3 = savedresults[3];
-                                savedresults[3] =savedresults[i];
-                                savedresults[i]= temp3;
-
-                            } 
-                            else if (savedresults[i].destination ==='Calgary' && savedresults[i].origin ==='Saskatoon' && savedresults[4].destination!='Calgary' && savedresults[4].origin!='Saskatoon' ) {
-                                var temp4= savedresults[4];
-                                savedresults[4]= savedresults[i];
-                                savedresults[i]= temp4;
-
-                            }
-
-
-
-                            else if (savedresults[i].destination===origin && savedresults[5].destination!=origin){
-                                var temp5 = savedresults[5];
-                                savedresults[5]= savedresults[i];
-                                savedresults[i]= temp5;
-                            } 
-
-                            }
-
-                            for ( var i = 0; i < savedresults.length; i++ ){
-
-                                if(savedresults[i].origin==='Calgary' && savedresults[i].destination==='Saskatoon' && savedresults[1].origin!='Calgary' && savedresults[1].destination!='Saskatoon'){
-                                    var temp1 = savedresults[1];
-                                    savedresults[1]= savedresults[i];
-                                    savedresults[i]= temp1;
-
-                                }  else if (savedresults[i].origin==='Saskatoon' && savedresults[i].destination==='Calgary' && savedresults[1].origin!='Saskatoon' && savedresults[1].destination!='Calgary'){
-                                        var temp4 = savedresults[4];
-                                        savedresults[4]= savedresults[i];
-                                        savedresults[i]= temp4;
-                                }
-
-                            }
-
-
-
-
-
-                        } else if (savedresults.length==4){
-                            console.log("length=four");
-
-                            for ( var i = 0; i < savedresults.length; i++ ){
-
-                                if (savedresults[i].origin===origin && savedresults[0].origin!= origin){
-                                    var temp = savedresults[0];
-                                    savedresults[0] =savedresults[i];
-                                    savedresults[i]= temp;
-
-                                } else if (savedresults[i].destination===destination && savedresults[1].destination!=destination){
-                                    var temp2 = savedresults[1];
-                                    savedresults[1]= savedresults[i];
-                                    savedresults[i]= temp2;
-
-                                } else if (savedresults[i].origin===destination && savedresults[2].origin!= destination){
-                                    var temp3 = savedresults[2];
-                                    savedresults[2] =savedresults[i];
-                                    savedresults[i]= temp3;
-
-                                } else if (savedresults[i].destination===origin && savedresults[3].destination!=origin){
-                                    var temp4 = savedresults[3];
-                                    savedresults[3]= savedresults[i];
-                                    savedresults[i]= temp4;
-                            }}
-
-
-                        } else if (savedresults.length==2){
-                            console.log("length=two");
-                            if (savedresults[0].origin!=origin){
-                                savedresults.reverse();
-
-                            }
-
-
-                        }
-
-
-
-
-                } %>
-
-
-
-
-
-
-
-
-                <% var hold = theDepartDate;%>
-
-                <%if (choice ==='oneway'){%>
-
-
                     <% for ( var i = 0; i < savedresults.length; i++ ) {%>
-
-
-
-
+                            
+                            
                             <ul>
-                                <li value="<%=(savedresults[i].flightnumber) %>"><%=(("flightnumber") +": "+savedresults[i].flightnumber) %></li>
-
-                                <li value="<%=(savedresults[i].origin) %>"><%=(("origin") +": "+savedresults[i].origin) %></li>
-
-                                <li value="<%=(savedresults[i].destination) %>"><%=(("destination") +": "+savedresults[i].destination) %></li>
-
-
-                                <li value="<%=(savedresults[i].depart_localtime) %>"><%=(("depart_localtime") +": "+savedresults[i].depart_localtime) %></li>
-                                <% if (i===0){ %>
-                                    <li value="<%=theDepartDate%>"> <%=theDepartDate%></li>
-
-                                <%} else{%>
-
-                                    <% if( parseInt(savedresults[i-1].arrival_localtime.slice(0,2))  >  parseInt(savedresults[i].depart_localtime.slice(0,2)) ){ %>
-
-
-                                        <% if( parseInt(hold.slice(8,10)) <= 8 ){ %>
-                                            <% hold = hold.replace( hold.slice(-1),(parseInt(hold.slice(9,10))+1).toString() ) %>
-                                            <li value="<%=theDepartDate%>"> <%=hold%></li>
-                                            <% console.log( "after  no.3 : ",hold);%>
-
-                                    <%} else{%>
-                                        <% hold = hold.replace( hold.slice(-2),(parseInt(hold.slice(8,10))+1).toString() ) %>
-                                        <li value="<%=theDepartDate%>"> <%=hold%></li>
-                                        <% console.log( "after  no.4: ",hold);%>
-
-                                        <%}%>
-
-
-
-                                    <%} else{%>
-                                        <li value="<%=theDepartDate%>"> <%=hold%></li>
-
-                                    <%}%>
-
-                                <%}%>
-
-
-                                <li value="<%=(savedresults[i].arrival_localtime) %>"><%=(("arrival_localtime") +": "+savedresults[i].arrival_localtime) %></li>
-
-                                <% if( parseInt(savedresults[i].depart_localtime.slice(0,2))  >  parseInt(savedresults[i].arrival_localtime.slice(0,2)) ){ %>
-
-                                    <% if( parseInt(hold.slice(8,10)) <= 8 ){ %>
-                                        <% hold = hold.replace( hold.slice(-1),(parseInt(hold.slice(9,10))+1).toString() ) %>
-                                        <li value="<%=theDepartDate%>"> <%=hold%></li>
-
-
-                                    <%} else{%>
-                                        <% hold = hold.replace( hold.slice(-2),(parseInt(hold.slice(8,10))+1).toString() ) %>
-                                        <li value="<%=theDepartDate%>"> <%=hold%></li>
-
-
-                                        <%}%>
-
-                                <%} else{%>
-                                    <li value="<%=theDepartDate%>"> <%=hold%></li>
-
-
-                                <%}%>
-
-
-                                <li value="<%=(savedresults[i].length) %>"><%=(("length") +": "+savedresults[i].length) %></li>
-
-                                <li value="<%=(savedresults[i].airplane_type) %>"><%=(("airplane_type") +": "+savedresults[i].airplane_type) %></li>
-
-
+                                <li value="<%=(savedresults[i].flightnumber) %>"><%=(("Flight Number") +": "+savedresults[i].flightnumber) %></li>
+                                    
+                                <li value="<%=(savedresults[i].origin) %>"><%=(("Origin") +": "+savedresults[i].origin) %></li>
+                    
+                                <li value="<%=(savedresults[i].destination) %>"><%=(("Destination") +": "+savedresults[i].destination) %></li>
+                    
+                                <li value="<%=(savedresults[i].depart_localtime) %>"><%=(("Depart Local Time") +": "+savedresults[i].depart_localtime) %></li>
+                    
+                                <li value="<%=(savedresults[i].arrival_localtime) %>"><%=(("Arrival Local Time") +": "+savedresults[i].arrival_localtime) %></li>
+                    
+                                <li value="<%=(savedresults[i].length) %>"><%=(("Length") +": "+savedresults[i].length) %></li>
+                    
+                                <li value="<%=(savedresults[i].airplane_type) %>"><%=(("Airplane Type") +": "+savedresults[i].airplane_type) %></li>
+                    
+                    
                                 <li id = "<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>" value="<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>"><%=(savedresults[i].cost) %></li>
-
-
+                    
                                     <%/* script to calulate the cost  */%>
-
+                    
                                 <script>
                                     save = document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML
                                     save = save.split('-')
                                     console.log(save)
-
-                                    document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML = "cost: " + (Math.floor(Math.random() * (Number(save[1]) - Number(save[0]) + 1)) + Number(save[0]))
+                    
+                                    document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML = "Cost: " + (Math.floor(Math.random() * (Number(save[1]) - Number(save[0]) + 1)) + Number(save[0]))
                                     console.log("reached")
                                 </script>
-
-
                             </ul>
                         <%}%>
-                  <%  } else {%>
-
-
-                    <% console.log(hold);%>
-                    <% for ( var i = 0; i < savedresults.length; i++ ) {%>
-
-                        <% if (savedresults[i].origin === destination ){ %>
-                            <% hold = theArriveDate; %>
-                            <% console.log("New hold : ", hold);%>
-                            <% theDepartDate = theArriveDate ; %>
-                            <% console.log("the new theDepartDate : ",theDepartDate);%>
-
-                        <%}%>
-
-                        <ul>
-                            <li value="<%=(savedresults[i].flightnumber) %>"><%=(("flightnumber") +": "+savedresults[i].flightnumber) %></li>
-
-                            <li value="<%=(savedresults[i].origin) %>"><%=(("origin") +": "+savedresults[i].origin) %></li>
-
-                            <li value="<%=(savedresults[i].destination) %>"><%=(("destination") +": "+savedresults[i].destination) %></li>
-
-
-                            <li value="<%=(savedresults[i].depart_localtime) %>"><%=(("depart_localtime") +": "+savedresults[i].depart_localtime) %></li>
-                            <% if (i===0){ %>
-                                <li value="<%=theDepartDate%>"> <%=theDepartDate%></li>
-
-                            <%} else{%>
-
-                                <% if( parseInt(savedresults[i-1].arrival_localtime.slice(0,2))  >  parseInt(savedresults[i].depart_localtime.slice(0,2)) ){ %>
-                                    <% console.log("before :",hold);%>
-
-                                    <% if( parseInt(hold.slice(8,10)) <= 8 ){ %>
-                                        <% hold = hold.replace( hold.slice(-1),(parseInt(hold.slice(9,10))+1).toString() ) %>
-                                        <li value="<%=theDepartDate%>"> <%=hold%></li>
-                                        <% console.log( "after  no.1: ",hold);%>
-
-                                    <%} else{%>
-                                        <% hold = hold.replace( hold.slice(-2),(parseInt(hold.slice(8,10))+1).toString() ) %>
-                                        <li value="<%=theDepartDate%>"> <%=hold%></li>
-                                        <% console.log( "after  no.2: ",hold);%>
-
-                                        <%}%>
-
-
-                                <%} else{%>
-                                    <li value="<%=theDepartDate%>"> <%=hold%></li>
-
-                                <%}%>
-
-                            <%}%>
-
-
-                            <li value="<%=(savedresults[i].arrival_localtime) %>"><%=(("arrival_localtime") +": "+savedresults[i].arrival_localtime) %></li>
-
-                            <% if( parseInt(savedresults[i].depart_localtime.slice(0,2))  >  parseInt(savedresults[i].arrival_localtime.slice(0,2)) ){ %>
-                                <% console.log("before no.2 :",hold);%>
-
-                                    <% if( parseInt(hold.slice(8,10)) <= 8 ){ %>
-                                        <% hold = hold.replace( hold.slice(-1),(parseInt(hold.slice(9,10))+1).toString() ) %>
-                                        <li value="<%=theDepartDate%>"> <%=hold%></li>
-                                        <% console.log( "after  no.3 : ",hold);%>
-
-                                    <%} else{%>
-                                        <% hold = hold.replace( hold.slice(-2),(parseInt(hold.slice(8,10))+1).toString() ) %>
-                                        <li value="<%=theDepartDate%>"> <%=hold%></li>
-                                        <% console.log( "after  no.4: ",hold);%>
-
-                                        <%}%>
-
-                            <%} else{%>
-                                <li value="<%=theDepartDate%>"> <%=hold%></li>
-
-
-                            <%}%>
-
-
-
-                            <li value="<%=(savedresults[i].length) %>"><%=(("length") +": "+savedresults[i].length) %></li>
-
-                            <li value="<%=(savedresults[i].airplane_type) %>"><%=(("airplane_type") +": "+savedresults[i].airplane_type) %></li>
-
-
-                            <li id = "<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>" value="<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>"><%=(savedresults[i].cost) %></li>
-
-
-                                <%/* script to calulate the cost  */%>
-
-                            <script>
-                                save = document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML
-                                save = save.split('-')
-                                console.log(save)
-
-                                document.getElementById("<%=(savedresults[i].flightnumber) %><%=(savedresults[i].cost) %>").innerHTML = "cost: " + (Math.floor(Math.random() * (Number(save[1]) - Number(save[0]) + 1)) + Number(save[0]))
-                                console.log("reached")
-                            </script>
-
-
-                        </ul>
-                    <%}%>
-
-                <%}%>
-       
                     </div>
                     <a href="/info"><button class="submit-button">BOOK</button></a>
 

@@ -2,7 +2,6 @@ var nodemailer = require("nodemailer");
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
-var moment = require('moment')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -24,12 +23,9 @@ var flightinfo=[];
 
 
 app.get("/searchResults", function(req, res){
-var theDepartDate = savedresults[0].theDepartDate;
- var theArriveDate = savedresults[0].theArriveDate;
- var choice = savedresults[0].tripchoice;		 var choice = savedresults[0].tripchoice;
- console.log(choice);		 var origin=savedresults[0].origin;
- var destination=savedresults[0].destination;
- 
+ console.log(savedresults)
+ var choice = savedresults[0].tripchoice;
+ console.log(choice);
 
  if (choice=="oneway"){
 
@@ -143,7 +139,7 @@ var theDepartDate = savedresults[0].theDepartDate;
  
  if (row.length != 0){
  flightinfo.push(row)
- res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theDepartDate, theArriveDate:theArriveDate, origin:origin, destination:destination})
+ res.render("searchResults", {savedresults:row, choice:choice})
  savedresults.push(row)
  savedresults = []
  
@@ -190,7 +186,7 @@ var theDepartDate = savedresults[0].theDepartDate;
  if (row.length != 0){
  flightinfo.push(row)
  
- res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theDepartDate, theArriveDate:theArriveDate, origin:origin, destination:destination})
+ res.render("searchResults", {savedresults:row, choice:choice})
  savedresults.push(row)
  savedresults = []
  
@@ -220,7 +216,7 @@ var theDepartDate = savedresults[0].theDepartDate;
  if (row.length != 0){
  flightinfo.push(row)
  
- res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theDepartDate, theArriveDate:theArriveDate, origin:origin, destination:destination})
+ res.render("searchResults", {savedresults:row, choice:choice})
  savedresults.push(row)
  savedresults = []
 
@@ -249,7 +245,7 @@ var theDepartDate = savedresults[0].theDepartDate;
  if (row.length != 0){
  flightinfo.push(row)
  
- res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theDepartDate, theArriveDate:theArriveDate, origin:origin, destination:destination})
+ res.render("searchResults", {savedresults:row, choice:choice})
  savedresults.push(row)
  savedresults = []
 
@@ -520,7 +516,7 @@ var theDepartDate = savedresults[0].theDepartDate;
  
  if (row.length != 0){
  flightinfo.push(row)
-res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theDepartDate, theArriveDate:theArriveDate, origin:origin, destination:destination})
+ res.render("searchResults", {savedresults:row, choice:choice})
  savedresults.push(row)
  savedresults = []
  
@@ -565,7 +561,7 @@ res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theD
  if (row.length != 0){
  flightinfo.push(row)
  
-res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theDepartDate, theArriveDate:theArriveDate, origin:origin, destination:destination})
+ res.render("searchResults", {savedresults:row, choice:choice})
  savedresults.push(row)
  savedresults = []
  
@@ -594,7 +590,7 @@ res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theD
  if (row.length != 0){
  flightinfo.push(row)
  
-res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theDepartDate, theArriveDate:theArriveDate, origin:origin, destination:destination})
+ res.render("searchResults", {savedresults:row, choice:choice})
  savedresults.push(row)
  savedresults = []
 
@@ -623,7 +619,7 @@ res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theD
  if (row.length != 0){
  flightinfo.push(row)
  
- res.render("searchResults", {savedresults:row, choice:choice, theDepartDate:theDepartDate, theArriveDate:theArriveDate, origin:origin, destination:destination})
+ res.render("searchResults", {savedresults:row, choice:choice})
  savedresults.push(row)
  savedresults = []
 
@@ -677,12 +673,7 @@ app.post("/searchResults", function(req, res){
  var tripchoice = req.body.tripchoice;
  var origin = req.body.origin;
  var destination = req.body.destination;
-// adding the date of travel
- var theDepartDate = req.body.theDepartDate;
- var theArriveDate = req.body.theArriveDate
-    
- var aresult = {tripchoice:tripchoice, origin:origin, destination:destination, theDepartDate:theDepartDate, theArriveDate:theArriveDate};
- 		
+ var aresult = {tripchoice:tripchoice, origin:origin, destination:destination};
  savedresults.push(aresult);
  // dislay results here
  res.redirect("/searchResults");
@@ -811,7 +802,7 @@ console.log(row[0].bookingid)
 var mailOptions = {
  from: 'airprairies@gmail.com',
  to: `${paymentinfo[0].email},`,
- subject:'Air Prairies - Electronic Ticket Itinerary/Receipt',
+ subject:'confirm',
  text: 
 
 
@@ -887,7 +878,7 @@ app.get('/result', function(req, res){
         res.render('result', {ref_info:row });
         })
     }
-ref_info =[]
+
 })
 
 
