@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Air Prairies</title>
 
-		<%# Eric Meyers CSS reset %> 
+		<%# Eric Meyers CSS reset %>
 		<link rel="stylesheet" type="text/css" href="/css/css-reset.css">
 
 		<%# Custom Style Sheet %>
@@ -19,7 +19,7 @@
 
 	<body>
 		<div class="container">
-			
+
 			<header>
 
 				<div class="logobox">
@@ -28,7 +28,7 @@
 
 				<nav>
 					<a href="/" class="navbutton">HOME</a>
-					<a href="/reference" class="navbutton">CHECK BOOKING</a>		
+					<a href="/reference" class="navbutton">CHECK BOOKING</a>
 					<a href="/about" class="navbutton">ABOUT</a>
 				</nav>
 
@@ -36,7 +36,7 @@
 
 		<div class="full">
 		<main>
-			
+
 			<h1>Search Flights:</h1>
 
 			<form action="/searchResults" method="POST" class="lines">
@@ -44,16 +44,17 @@
 				<div class="line1">
 
 					<label  for="oneway"> One-way :
-						<input name="tripchoice" value="oneway" type="radio">
+						<input name="tripchoice" value="oneway" type="radio" onclick="hideDiv2()">
 					</label>
-					<label for="round"> Round-trip :
-						<input name="tripchoice" value="round" type="radio">
-					</label>
+					<label for="round"> Round-trip : </label>
+                    <input  name="tripchoice" value="round" type="radio" onclick="displayDiv2()">
+                    <p></p>
+
 				</div>
 
 				<div class="line2">
 
-					<label for="origin"> Origin : </label>
+					<label for="origin"> From: </label>
 					<select id= "origin", name = "origin" class="origin">
 						<option value="">------select------</option>
 						<%var list= []%>
@@ -64,31 +65,53 @@
 	         			<%}%>
 					</select>
 
-					<label for="destination"> Destination : </label>
+					<label for="destination"> To: </label>
 					<select class="destination" id= "destination", name = "destination">
 
 						<option value="">------select------</option>
 						<%var list= []%>
 
 	    				<%for ( var i = 0; i < oneWayFlights.length; i++ ) { %>
-	    
+
 	        			<option  value="<%=oneWayFlights[i].origin%>"><%=oneWayFlights[i].origin%></option>
 
 	        			<%}%>
-	            
+
 					</select>
 
 				</div>
 
 				<div class="line3">
 
-					<label for="theDate">Departure date:
-             			<input type="date" name="theDate" min="2020-01-01" max="2022-04-30">
+					<label for="theDepartDate">Departure:
+             			<input type="date" name="theDepartDate" min="2020-01-01" max="2022-04-30">
 					</label>
+
+
+                    <div id=depart2_container style="display: none">
+                        <label style="display: inline;" for="theArriveDate">Return: 
+                            <input type="date" name="theArriveDate" min="2020-01-01" max="2022-04-30">
+                        </label>
+                    </div>
+
 
 				</div>
 
 	 			<button class="submit-button">Submit</button>
+
+
+                <script type="text/javascript">
+                    function displayDiv2(){
+                    var depcont2 = document.getElementById("depart2_container");
+                    depcont2.style.display ="block";
+                    }
+
+                    function hideDiv2(){
+                        var depcont2 = document.getElementById("depart2_container");
+                        depcont2.style.display ="none";
+                    }
+
+                </script>
 
 				</form>
 			</main>
